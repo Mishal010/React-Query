@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { fetchIndvPost } from "../../API/api";
 
 const FetchIndv = () => {
@@ -21,6 +21,9 @@ const FetchIndv = () => {
           <p>{data.body}</p>
         </li>
       </ul>
+      <NavLink to="/rq">
+        <button>GO BACK</button>
+      </NavLink>
     </div>
   );
 };
